@@ -1,15 +1,38 @@
+/* Main */
 .game_container {
   display: grid;
   flex-direction: column;
   justify-content: center;
   font-family: "Oxygen Mono";
   font-size: 16px;
+  grid-column-gap: 50px;
+}
+
+.board_column {
+  grid-column: 1 / span 1;
+  grid-row: 1 / 4;
+  display: grid
+}
+
+.info_column {
+  grid-column: 2 / span 1;
+  grid-row: 1 / 2;
 }
 
 .heading {
   display: block;
   justify-content: center;
   text-align: center;
+}
+
+/* Board */
+
+#board_1 {
+  grid-row: 1 / 2;
+}
+
+#board_2 {
+  grid-row: 3 / 4;
 }
 
 .square {
@@ -57,4 +80,29 @@
 .row {
   position: relative;
   display: flex;
+}
+
+/* Info / Misc */
+
+.settings {
+  height: 440px;
+}
+
+.dock {
+  margin-top: 32px;
+  width: 200px;
+  height: 400px;
+  background-color: lightblue;
+  grid-row: 3 / 4;
+}
+
+/* Ships */
+
+.ship {
+  width: 40px;
+  background-color: gold;
+}
+
+.destroyer {
+  height: 80px;
 }

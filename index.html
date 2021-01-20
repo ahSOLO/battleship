@@ -6,20 +6,32 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Include google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <title>Battleship!</title>
 </head>
 <body>
   <div class="game_container">
-    <div class="board" id="board_1">
-      <h2 class="heading">Opponent</h2>
-      <div class="letters"></div>
-      <div class="numbers"></div>
+    <div class="board_column">
+      <div class="board" id="board_1">
+        <h2 class="heading">Opponent</h2>
+        <div class="letters"></div>
+        <div class="numbers"></div>
+      </div>
+      <div class="board" id="board_2">
+        <h2 class="heading">Player</h2>
+        <div class="letters"></div>
+        <div class="numbers"></div>
+      </div>
     </div>
-    <div class="board" id="board_2">
-      <h2 class="heading">Player</h2>
-      <div class="letters"></div>
-      <div class="numbers"></div>
+    <div class="info_column">
+      <h2 class="heading">Settings</h2>
+      <div class="settings"></div>
+      <h2 class="heading">Dock</h2>
+      <div class="dock">
+        <div class="ship destroyer"></div>
+      </div>
     </div>
   </div>
   <script src="app.js"></script>

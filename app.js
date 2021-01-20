@@ -55,8 +55,8 @@ const setUpLabels = function () {
       board.appendChild(number);
     }
   })
-
 }
+
 
 // Initialize Board
 setUpBoards();
