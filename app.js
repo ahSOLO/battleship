@@ -13,6 +13,7 @@ const setUpBoards = function() {
     // Iterate through rows
     for (let i = 0; i < boardLength; i++) {
       let row = document.createElement('div');
+      row.classList.add("row");
       board.appendChild(row).id = `board_${idx + 1}_row_${i + 1}`;
       if (i % 2 === 1) {
         color = 1;
@@ -49,6 +50,7 @@ const setUpLabels = function () {
   boardNumbers.forEach( (board) => {    
     for (let i = 0; i < boardLength; i++) {
       let number = document.createElement('li');
+      number.classList.add("number");
       number.textContent = i + 1;
       board.appendChild(number);
     }
