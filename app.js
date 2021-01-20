@@ -5,7 +5,7 @@ const boardLength = 10;
 
 // console.log({boards, boardLetters, boardNumbers});
 
-const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 const setUpBoards = function() {
   boards.forEach( (board, idx) => {    

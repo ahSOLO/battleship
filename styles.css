@@ -1,9 +1,15 @@
-.game_container{
-  display: flex;
+.game_container {
+  display: grid;
   flex-direction: column;
   justify-content: center;
   font-family: "Oxygen Mono";
   font-size: 16px;
+}
+
+.heading {
+  display: block;
+  justify-content: center;
+  text-align: center;
 }
 
 .square {
