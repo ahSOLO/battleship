@@ -61,16 +61,3 @@ const setUpLabels = function () {
 // Initialize Board
 setUpBoards();
 setUpLabels();
-
-// jQuery
-$( function() {
-  $( ".ship" ).draggable({
-  });
-  $( ".square" ).droppable({
-    drop: function( event, ui ) {
-      $( this )
-        .addClass( "occupied" );
-    }
-  });
-})
-
