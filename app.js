@@ -3,8 +3,6 @@ const boardLetters = document.querySelectorAll('.letters');
 const boardNumbers = document.querySelectorAll('.numbers');
 const boardLength = 10;
 
-// console.log({boards, boardLetters, boardNumbers});
-
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 const setUpBoards = function() {
@@ -57,7 +55,34 @@ const setUpLabels = function () {
   })
 }
 
-
 // Initialize Board
 setUpBoards();
 setUpLabels();
+
+// Allow Drag and Drop
+ships = document.querySelectorAll('.ship');
+ships.forEach(() => {
+  addEventListener("dragstart", (ev) => {
+    ev.target.style.opacity = '0.4';
+    ev.dataTransfer.effectAllowed = 'move';
+    ev.dataTransfer.setData('text/html', ev.target.outerHTML);
+  });
+  addEventListener("dragend", (ev) => {
+    ev.target.style.opacity = '1';
+  });
+});
+
+playerBoard = document.querySelector('#board_2');
+playerBoard.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+});
+playerBoard.addEventListener("dragenter", (ev) => {
+  ev.target.classList.add("hover");
+});
+playerBoard.addEventListener("dragleave", (ev) => {
+  ev.target.classList.remove("hover");
+});
+playerBoard.addEventListener("drop", (ev) => {
+  ev.target.classList.remove("hover");
+  ev.target.outerHTML = ev.dataTransfer.getData('text/html');
+});
